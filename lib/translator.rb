@@ -24,5 +24,6 @@ def get_english_meaning(file, jap_emoji)
     library[meanings][emojis] == jap_emoji
     x = meanings
   end
+  puts x
   return x
 end
