@@ -24,10 +24,8 @@ def get_english_meaning(file, jap_emoji)
   library.find do |meanings, emojis|
     if library[meanings][:japanese] == jap_emoji
       x = meanings
-    end
-    if x = ""
+    else
       puts apology
-      end
     end
   end
   return x
