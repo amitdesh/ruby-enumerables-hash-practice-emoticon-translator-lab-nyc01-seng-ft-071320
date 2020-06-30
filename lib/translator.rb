@@ -22,6 +22,10 @@ def get_japanese_emoticon(file, jap_emoji)
 end
 
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(file, jap_emoji)
+  library = load_library(file)
+  library.find do |meanings, emojis|
+    library[meanings][emojis] == jap_emoji
+  end
+  return meanings
 end
