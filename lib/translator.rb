@@ -26,6 +26,8 @@ def get_english_meaning(file, jap_emoji)
       x = meanings
     end
   end
-  puts apology
+  if x = ""
+    puts apology
+  end
   return x
 end
