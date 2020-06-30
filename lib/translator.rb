@@ -13,12 +13,7 @@ def load_library(filepath)
   return emoji_new
 end
 
-def get_japanese_emoticon(file, jap_emoji)
-  library = load_library(file)
-  library.find do |meanings, emojis|
-    library[meanings][emojis] == jap_emoji
-  end
-  return meanings
+def get_japanese_emoticon
 end
 
 
