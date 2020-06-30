@@ -19,7 +19,7 @@ library = load_library(file)
   x = apology
   library.find do |meanings, emojis|
     if library[meanings][:english] == eng_emoji
-      x = meanings
+      x = emojis
     end
   end
   return x
