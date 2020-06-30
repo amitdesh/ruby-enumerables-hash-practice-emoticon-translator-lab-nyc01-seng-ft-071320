@@ -20,11 +20,13 @@ end
 def get_english_meaning(file, jap_emoji)
   library = load_library(file)
   x = ""
+  apology = "Sorry, there is no match"
   library.find do |meanings, emojis|
     if library[meanings][:japanese] == jap_emoji
       x = meanings
     end
   end
-  puts x
+  if x= ""
+    puts apology
   return x
 end
