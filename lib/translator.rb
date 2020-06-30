@@ -22,7 +22,7 @@ def get_english_meaning(file, jap_emoji)
   x = ""
   library.find do |meanings, emojis|
     library[meanings][emojis] == jap_emoji
-    x = emojis[:english]
+    x = meanings
   end
   puts x
   return x
