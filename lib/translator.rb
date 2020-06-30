@@ -13,7 +13,16 @@ def load_library(filepath)
   return emoji_new
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon(file, eng_emoji)
+library = load_library(file)
+  apology = "Sorry, that emoticon was not found"
+  x = apology
+  library.find do |meanings, emojis|
+    if library[meanings][:english] == eng_emoji
+      x = meanings
+    end
+  end
+  return x
 end
 
 
